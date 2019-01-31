@@ -1,2 +1,3 @@
 # GenerateSeqDiagram
-Generates sequence diagram using Python rendered using PlantUML plugin
+
+Generates sequence diagram using Python, which are rendered using PlantUML plugin.
