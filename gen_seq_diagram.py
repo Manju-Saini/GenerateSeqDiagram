@@ -2,10 +2,10 @@ import os
 from inspect import getframeinfo, stack, getfile
 
 # file name to which sequence diagram will be written
-seq_f_name = "lock.puml"
+seq_f_name = "sample_sequence_diagram.puml"
 is_seq_on = True
 
-def writeSeqFile(content=""):
+def writeSeqFile(content):
     with open(seq_f_name, 'a+') as file:
         file.write(content)
 
@@ -30,19 +30,6 @@ def seq():
             return ret
         return wrapped_f
     return wrap
-
-# Example
-# @seq()
-# def testb(b, bb):
-#     # print(b, bb)
-#     pass
-#
-# @seq()
-# def sayHello(a1, a2, a3, a4):
-#     testb(a1, a2)
-#
-#
-# sayHello("say", "hello", "argument", "list")
 
 def get_filename(f_path):
     f_name_full = os.path.basename(f_path)
